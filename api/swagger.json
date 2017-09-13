@@ -1,0 +1,100 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "<API für die Bachelorarbeit APP>"
+  },
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/small": {
+      "get": {
+        "description": "Returns a json file.",
+        "operationId": "getSmall",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response | The JSON FILE ",
+            "schema": {
+              "type": "object",
+              "title": "Small",
+              "items": {
+                "$ref": "#/definitions/small"
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have necessary permissions for the resource"
+          }
+        },
+        "x-swagger-router-controller": "Default"
+      }
+    },
+    "/medium": {
+      "get": {
+        "description": "Returns a json file.",
+        "operationId": "getMedium",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response | The JSON FILE ",
+            "schema": {
+              "type": "object",
+              "title": "Small",
+              "items": {
+                "$ref": "#/definitions/medium"
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have necessary permissions for the resource"
+          }
+        },
+        "x-swagger-router-controller": "Default"
+      }
+    },
+    "/large": {
+      "get": {
+        "description": "Returns a json file.",
+        "operationId": "getLarge",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response | The JSON FILE ",
+            "schema": {
+              "type": "object",
+              "title": "Small",
+              "items": {
+                "$ref": "#/definitions/large"
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have necessary permissions for the resource"
+          }
+        },
+        "x-swagger-router-controller": "Default"
+      }
+    }
+  },
+  "definitions": {
+    "small": {
+      "$ref": "./files/small.json"
+    },
+    "medium": {
+      "$ref": "./files/medium.json"
+    },
+    "large": {
+      "$ref": "./files/medium.json"
+    }
+  }
+}
