@@ -15,7 +15,6 @@ exports.getLarge = function(args, res, next) {
    **/
    $RefParser.dereference(swaggerDoc)
      .then(function(schema) {
-       console.log(schema.definitions.large);
        data = schema.definitions.large;
        var examples = {};
 
@@ -42,7 +41,6 @@ exports.getMedium = function(args, res, next) {
    **/
    $RefParser.dereference(swaggerDoc)
      .then(function(schema) {
-       console.log(schema.definitions.medium);
        data = schema.definitions.medium;
        var examples = {};
        examples['application/json'] = "{}";
@@ -68,7 +66,6 @@ exports.getSmall = function(args, res, next) {
    **/
    $RefParser.dereference(swaggerDoc)
      .then(function(schema) {
-       console.log(schema.definitions.small);
        data = schema.definitions.small;
        var examples = {};
        examples['application/json'] = "{}";
